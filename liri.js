@@ -1,8 +1,9 @@
 require("dotenv").config();
 var axios = require("axios");
+var Spotify = require('node-spotify-api');
 var keys = require("./keys.js");
 
-//var spotify = new Spotify(keys.spotify);
+var spotify = new Spotify(keys.spotify);
 
 var nodeArgs = process.argv;
 var queryRequest = process.argv[2];
@@ -65,5 +66,16 @@ function callBandAPI(url, queryRequest) {
         });
 }
 
+function callSpotifyAPI(queryRequest){
+    spotify
+        .search({ type: 'track', query: queryRequest })
+        .then(function(response) {
+    console.log(response);
+   })
+    .catch(function(err) {
+    console.log(err);
+  });
+}
 
-callBandAPI(movieAPI, queryRequest);
+//callBandAPI(movieAPI, queryRequest);
+callSpotifyAPI(searchtext);
