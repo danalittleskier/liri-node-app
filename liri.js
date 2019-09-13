@@ -38,10 +38,16 @@ function callBandAPI(url, queryRequest) {
             }
             if (queryRequest === "movie-this") {
                 //console.log(response.data);
-                console.log("Title: " + response.data.Title);
-                console.log("Year: " + response.data.Year);
-                console.log("Rating: " + response.data.imdbRating);
-                console.log("Plot: " + response.data.Plot);
+                console.log("Title:  " + response.data.Title);
+                console.log("Year:  " + response.data.Year);
+                console.log("Rating:  " + response.data.imdbRating);              
+                console.log("Ratings - Rotten Tomatoes:  "+ response.data.Ratings[1].Value);
+                console.log("Country:  "+ response.data.Country);
+                console.log("Language:  "+ response.data.Language);
+                console.log("Actors:  "+ response.data.Actors);
+                console.log("Plot:  " + response.data.Plot);
+                
+
 
             }
 
@@ -68,14 +74,14 @@ function callBandAPI(url, queryRequest) {
 
 function callSpotifyAPI(queryRequest){
     spotify
-        .search({ type: 'track', query: queryRequest })
+        .search({ type: 'track', limit: 2, query: queryRequest })
         .then(function(response) {
-    console.log(response);
+    console.log(response.tracks.items[1]);
    })
     .catch(function(err) {
     console.log(err);
   });
 }
 
-//callBandAPI(movieAPI, queryRequest);
-callSpotifyAPI(searchtext);
+callBandAPI(movieAPI, queryRequest);
+//callSpotifyAPI(searchtext);
