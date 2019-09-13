@@ -28,60 +28,64 @@ var searchtext = grabArguments(nodeArgs);
 var bandAPI = "https://rest.bandsintown.com/artists/" + searchtext + "/events?app_id=codingbootcamp";
 var movieAPI = "http://www.omdbapi.com/?t=" + searchtext + "&y=&plot=short&apikey=trilogy";
 
-function callBandAPI(url, queryRequest) {
+function callAPI(queryRequest) {
 
-    axios.get(url).then(
-        function (response) {
-            if (queryRequest === "concert-this") {
-                console.log("Venue " + response.data[0].venue.name);
-                console.log("City " + response.data[0].venue.city + " State " + response.data[0].venue.region);
-            }
-            if (queryRequest === "movie-this") {
-                //console.log(response.data);
-                console.log("Title:  " + response.data.Title);
-                console.log("Year:  " + response.data.Year);
-                console.log("Rating:  " + response.data.imdbRating);              
-                console.log("Ratings - Rotten Tomatoes:  "+ response.data.Ratings[1].Value);
-                console.log("Country:  "+ response.data.Country);
-                console.log("Language:  "+ response.data.Language);
-                console.log("Actors:  "+ response.data.Actors);
-                console.log("Plot:  " + response.data.Plot);
-                
+    if (queryRequest === "spotify-this-song") {
+        spotify
+            .search({ type: 'track', limit: 2, query: searchtext })
+            .then(function (response) {
+                console.log(response.tracks.items[1]);
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
+    }
+    else {
+        if (queryRequest === "concert-this") {
+            axios.get(bandAPI).then(
+                function (response) {
+                    console.log("Venue " + response.data[0].venue.name);
+                    console.log("City " + response.data[0].venue.city + " State " + response.data[0].venue.region);
+
+                }).catch(err);
+        }
+        if (queryRequest === "movie-this") {
+            axios.get(movieAPI).then(
+                function (response) {
+                    //console.log(response.data);
+                    console.log("-------Movie------")
+                    console.log("Title:  " + response.data.Title);
+                    console.log("Year:  " + response.data.Year);
+                    console.log("Rating:  " + response.data.imdbRating);
+                    console.log("Ratings - Rotten Tomatoes:  " + response.data.Ratings[1].Value);
+                    console.log("Country:  " + response.data.Country);
+                    console.log("Language:  " + response.data.Language);
+                    console.log("Actors:  " + response.data.Actors);
+                    console.log("Plot:  " + response.data.Plot);
 
 
-            }
+                }).catch(err);
+        }
+    }
 
-        })
-        .catch(function (error) {
-            if (error.response) {
+    function err(error) {
+        if (error.response) {
 
-                console.log("---------------Data---------------");
-                console.log(error.response.data);
-                console.log("---------------Status---------------");
-                console.log(error.response.status);
-                console.log("---------------Status---------------");
-                console.log(error.response.headers);
-            } else if (error.request) {
-                // The request was made but no response was received
-                console.log(error.request);
-            } else {
-                // Something happened in setting up the request that triggered an Error
-                console.log("Error", error.message);
-            }
-            console.log(error.config);
-        });
+            console.log("---------------Data---------------");
+            console.log(error.response.data);
+            console.log("---------------Status---------------");
+            console.log(error.response.status);
+            console.log("---------------Status---------------");
+            console.log(error.response.headers);
+        } else if (error.request) {
+            // The request was made but no response was received
+            console.log(error.request);
+        } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log("Error", error.message);
+        }
+        console.log(error.config);
+    };
 }
 
-function callSpotifyAPI(queryRequest){
-    spotify
-        .search({ type: 'track', limit: 2, query: queryRequest })
-        .then(function(response) {
-    console.log(response.tracks.items[1]);
-   })
-    .catch(function(err) {
-    console.log(err);
-  });
-}
-
-callBandAPI(movieAPI, queryRequest);
-//callSpotifyAPI(searchtext);
+callAPI(queryRequest);
