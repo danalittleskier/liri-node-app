@@ -2,6 +2,8 @@ require("dotenv").config();
 var axios = require("axios");
 var Spotify = require('node-spotify-api');
 var keys = require("./keys.js");
+var moment = require('moment');
+//moment().format();
 
 var spotify = new Spotify(keys.spotify);
 
@@ -44,8 +46,12 @@ function callAPI(queryRequest) {
         if (queryRequest === "concert-this") {
             axios.get(bandAPI).then(
                 function (response) {
-                    console.log("Venue " + response.data[0].venue.name);
-                    console.log("City " + response.data[0].venue.city + " State " + response.data[0].venue.region);
+                    console.log("-------Bands------");
+                    //console.log(response.data);
+                    console.log("Band: " + response.data[0].lineup[0]);
+                    console.log("Venue:  " + response.data[0].venue.name);
+                    console.log("City:  " + response.data[0].venue.city + " State " + response.data[0].venue.region);
+                    console.log("Date:  " + moment(response.data[0].datetime).format('MM/DD/YYYY'));
 
                 }).catch(err);
         }
@@ -53,7 +59,7 @@ function callAPI(queryRequest) {
             axios.get(movieAPI).then(
                 function (response) {
                     //console.log(response.data);
-                    console.log("-------Movie------")
+                    console.log("-------Movie------");
                     console.log("Title:  " + response.data.Title);
                     console.log("Year:  " + response.data.Year);
                     console.log("Rating:  " + response.data.imdbRating);
