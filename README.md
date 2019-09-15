@@ -1,6 +1,6 @@
 # LIRI Bot
 
-LIRI is a command line node app that takes in parameters and gives you back data by connecting to different APIs.
+LIRI is a command line node app that takes in comand line parameters and gives you back data by connecting to different APIs.
 
 ### Overview
 
@@ -36,12 +36,15 @@ This app is written in JavaScript with Node and following APIs and packages
 8. From the command line use `spotify-this-song` as the argument followed by the name of the song you want to search the Spotify API (e.g. `node liri spotify-this-song the final countdown`)
 9. From the command line use `do-what-it-says` as the argument and it will run with the options listed in the `random.txt` file
 10. All the outputs will be logged to the console and to the log.txt file
+11. If no search terms are provided default cases will be used.
 
 ### Screenshots
 
 ![Screenshot](images/LiriBot_ScreenShot1.png)
 
 ![Screenshot](images/LiriBot_ScreenShot2.png)
+
+![Screenshot](images/LiriBot_ScreenShot3.png)
 
 
 ### GitHub Link
