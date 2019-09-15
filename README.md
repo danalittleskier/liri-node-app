@@ -26,10 +26,11 @@ This app is written in JavaScript with Node and following APIs and packages
 
 ### Instructions
 
-1. Install node.js in order to be able to run CLI app
-2. After you downloaded cloned the repository run npm install to add all the modules need it from the `package.json` file
-4. In order to use the spotify API you need to store your ID and Secret keys in the .env folder
-5. Run `node liri` if you want to see the default case the runs the application with inputs from the `random.txt` file
+1. Install node.js in order to be able to run the CLI app
+2. After you downloaded cloned the repository run `npm install` to add all the modules listed in the `package.json` file
+4. In order to use the spotify API you need to store your ID and Secret keys in a file named `.env`.
+5. All commands are ran in the root folder of the application.
+5. Use `node liri` on the command line if you want to see the default case the runs the application with inputs from the `random.txt` file.
 6. From the command line use `concert-this` as the argument followed by the name of the band or artist if you want to search the Bands In Town API (e.g. `node liri concert-this Madonna`) 
 7. From the command line use `movie-this` as the argument followed by the name of the movie if you want to search the OMDB API (e.g. `node liri movie-this Gladiator`)
 8. From the command line use `spotify-this-song` as the argument followed by the name of the song you want to search the Spotify API (e.g. `node liri spotify-this-song the final countdown`)
