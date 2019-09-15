@@ -10,17 +10,19 @@ It also logs the results out to `log.txt`.
 
 ### Technologies
 
-This app is written in Javascript with Node and following packages
+This app is written in JavaScript with Node and following APIs and packages
 
 * [Node-Spotify-API](https://www.npmjs.com/package/node-spotify-api)
 
 * [Axios](https://www.npmjs.com/package/axios)
 
-* You'll use Axios to grab data from the [OMDB API](http://www.omdbapi.com) and the [Bands In Town API](http://www.artists.bandsintown.com/bandsintown-api)
-
 * [Moment](https://www.npmjs.com/package/moment)
 
 * [DotEnv](https://www.npmjs.com/package/dotenv)
+
+* [OMDB API](http://www.omdbapi.com) 
+
+* [Bands In Town API](http://www.artists.bandsintown.com/bandsintown-api)
 
 ### Instructions
 
@@ -33,3 +35,11 @@ This app is written in Javascript with Node and following packages
 8. From the command line use `spotify-this-song` as the argument followed by the name of the song you want to search the Spotify API (e.g. `node liri spotify-this-song the final countdown`)
 9. From the command line use `do-what-it-says` as the argument and it will run with the options listed in the `random.txt` file
 10. All the outputs will be logged to the console and to the log.txt file
+
+### GitHub Link
+
+https://github.com/danalittleskier/liri-node-app
+
+### Role
+
+Dana Alexandrescu - developer
