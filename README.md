@@ -27,8 +27,8 @@ This app is written in JavaScript with Node and following APIs and packages
 ### Instructions
 
 1. Install node.js in order to be able to run the CLI app
-2. After you downloaded cloned the repository run `npm install` to add all the modules listed in the `package.json` file
-4. In order to use the spotify API you need to store your ID and Secret keys in a file named `.env`.
+2. After you cloned the repository run `npm install` to add all the modules listed in the `package.json` file
+4. In order to use the spotify API you need to store your own ID and Secret keys in a file named `.env`.
 5. All commands are ran in the root folder of the application.
 5. Use `node liri` on the command line if you want to see the default case the runs the application with inputs from the `random.txt` file.
 6. From the command line use `concert-this` as the argument followed by the name of the band or artist if you want to search the Bands In Town API (e.g. `node liri concert-this Madonna`) 
@@ -36,6 +36,13 @@ This app is written in JavaScript with Node and following APIs and packages
 8. From the command line use `spotify-this-song` as the argument followed by the name of the song you want to search the Spotify API (e.g. `node liri spotify-this-song the final countdown`)
 9. From the command line use `do-what-it-says` as the argument and it will run with the options listed in the `random.txt` file
 10. All the outputs will be logged to the console and to the log.txt file
+
+### Screenshots
+
+![Screenshot](images/LiriBot_ScreenShot1.png)
+
+![Screenshot](images/LiriBot_ScreenShot2.png)
+
 
 ### GitHub Link
 

@@ -122,4 +122,144 @@ Preview:  https://p.scdn.co/mp3-preview/95b70df7dda2d699957e8b068b89e233e3a5e5ee
 
 Artist:  Europe
 
+-----------------------------Movie------
+
+Title:  Gladiator
+
+Year:  2000
+
+Rating:  8.5
+
+Ratings - Rotten Tomatoes:  76%
+
+Country:  USA, UK, Malta, Morocco
+
+Language:  English
+
+Actors:  Russell Crowe, Joaquin Phoenix, Connie Nielsen, Oliver Reed
+
+Plot:  A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.
+
+-----------------------------Bands------
+
+Band: Madonna
+
+Venue:  BAM (Brooklyn Academy of Music)
+
+City:  Brooklyn State NY
+
+Date:  09/14/2019
+
+-----------------------------Movie------
+
+Title:  Legends of the Fall
+
+Year:  1994
+
+Rating:  7.5
+
+Ratings - Rotten Tomatoes:  45/100
+
+Country:  USA
+
+Language:  English, Cornish
+
+Actors:  Brad Pitt, Anthony Hopkins, Aidan Quinn, Julia Ormond
+
+Plot:  In the early 1900s, three brothers and their father living in the remote wilderness of Montana are affected by betrayal, history, love, nature, and war.
+
+-----------------------------Movie------
+
+Title:  Gladiator
+
+Year:  2000
+
+Rating:  8.5
+
+Ratings - Rotten Tomatoes:  76%
+
+Country:  USA, UK, Malta, Morocco
+
+Language:  English
+
+Actors:  Russell Crowe, Joaquin Phoenix, Connie Nielsen, Oliver Reed
+
+Plot:  A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.
+
+-----------------------------Bands------
+
+Band: Lady Gaga
+
+Venue:  LADY GAGA ENIGMA
+
+City:  Las Vegas State NV
+
+Date:  10/17/2019
+
+-----------------------------Song------
+
+Song name:  Brown Eyed Girl
+
+Album:  Blowin' Your Mind!
+
+Preview:  https://p.scdn.co/mp3-preview/cb2b0096b08796c0c1cfeb31b9a9802ce0a3b44a?cid=b136331984fa4270939851bcdc3fe980
+
+Artist:  Van Morrison
+
+-----------------------------Movie------
+
+Title:  Bohemian Rhapsody
+
+Year:  2018
+
+Rating:  8.0
+
+Ratings - Rotten Tomatoes:  61%
+
+Country:  UK, USA
+
+Language:  English
+
+Actors:  Rami Malek, Lucy Boynton, Gwilym Lee, Ben Hardy
+
+Plot:  The story of the legendary British rock band Queen and lead singer Freddie Mercury, leading up to their famous performance at Live Aid (1985).
+
+-----------------------------Bands------
+
+Band: Lady Gaga
+
+Venue:  LADY GAGA ENIGMA
+
+City:  Las Vegas State NV
+
+Date:  10/17/2019
+
+-----------------------------Song------
+
+Song name:  Brown Eyed Girl
+
+Album:  Blowin' Your Mind!
+
+Preview:  https://p.scdn.co/mp3-preview/cb2b0096b08796c0c1cfeb31b9a9802ce0a3b44a?cid=b136331984fa4270939851bcdc3fe980
+
+Artist:  Van Morrison
+
+-----------------------------Movie------
+
+Title:  Bohemian Rhapsody
+
+Year:  2018
+
+Rating:  8.0
+
+Ratings - Rotten Tomatoes:  61%
+
+Country:  UK, USA
+
+Language:  English
+
+Actors:  Rami Malek, Lucy Boynton, Gwilym Lee, Ben Hardy
+
+Plot:  The story of the legendary British rock band Queen and lead singer Freddie Mercury, leading up to their famous performance at Live Aid (1985).
+
 ----------------------
