@@ -59,18 +59,23 @@ function callAPI(queryRequest) {
         spotify
             .search({ type: 'track', limit: 2, query: searchtext })
             .then(function (response) {
-                //console.log(response.tracks);
-                var showData = [
-                    "-------Song------",
-                    "Song name:  " + response.tracks.items[0].name,
-                    "Album:  " + response.tracks.items[0].album.name,
-                    "Preview:  " + response.tracks.items[0].preview_url,
-                    "Artist:  " + response.tracks.items[0].artists[0].name,
-                    "----------------------"
-                ].join("\n\n");
-                console.log(showData);
+                //check if song was found
+                if (response.tracks.items.length > 0) {
+                    var showData = [
+                        "-------Song------",
+                        "Song name:  " + response.tracks.items[0].name,
+                        "Album:  " + response.tracks.items[0].album.name,
+                        "Preview:  " + response.tracks.items[0].preview_url,
+                        "Artist:  " + response.tracks.items[0].artists[0].name,
+                        "----------------------"
+                    ].join("\n\n");
 
-                logOutput(showData);
+                    console.log(showData);
+                    logOutput(showData);
+                }
+                else {
+                    console.log("SONG NOT FOUND!");
+                }
             })
             .catch(function (err) {
                 console.log(err);
@@ -84,11 +89,10 @@ function callAPI(queryRequest) {
 
             var bandAPI = "https://rest.bandsintown.com/artists/" + searchtext + "/events?app_id=codingbootcamp";
 
-            //console.log(bandAPI);
             axios.get(bandAPI).then(
                 function (response) {
-                    //console.log(response);
-                    if (response.data.length > 0) {
+                    //check if band/artist was found
+                    if (response.data.length > 0 && !response.data.includes('warn=Not found')) {
                         var showData = [
                             "-------Bands------",
                             "Band: " + response.data[0].lineup[0],
@@ -97,12 +101,12 @@ function callAPI(queryRequest) {
                             "Date:  " + moment(response.data[0].datetime).format('MM/DD/YYYY'),
                             "----------------------"
                         ].join("\n\n");
-                        console.log(showData);
 
+                        console.log(showData);
                         logOutput(showData);
                     }
                     else {
-                        console.log("BAND NOT FOUND!");
+                        console.log("ARTIST NOT FOUND!");
                     }
 
                 }).catch(err);
@@ -112,22 +116,31 @@ function callAPI(queryRequest) {
                 searchtext = "Mr. Nobody";
             }
             var movieAPI = "http://www.omdbapi.com/?t=" + searchtext + "&y=&plot=short&apikey=trilogy";
+
             axios.get(movieAPI).then(
                 function (response) {
-                    var showData = [
-                        "-------Movie------",
-                        "Title:  " + response.data.Title,
-                        "Year:  " + response.data.Year,
-                        "Rating:  " + response.data.imdbRating,
-                        "Ratings - Rotten Tomatoes:  " + response.data.Ratings[1].Value,
-                        "Country:  " + response.data.Country,
-                        "Language:  " + response.data.Language,
-                        "Actors:  " + response.data.Actors,
-                        "Plot:  " + response.data.Plot,
-                        "----------------------"
-                    ].join("\n\n");
-                    console.log(showData);
-                    logOutput(showData);
+                    //check if movie title was found
+                    if(response.data.Response === 'True'){
+                        var showData = [
+                            "-------Movie------",
+                            "Title:  " + response.data.Title,
+                            "Year:  " + response.data.Year,
+                            "Rating:  " + response.data.imdbRating,
+                            "Ratings - Rotten Tomatoes:  " + response.data.Ratings[1].Value,
+                            "Country:  " + response.data.Country,
+                            "Language:  " + response.data.Language,
+                            "Actors:  " + response.data.Actors,
+                            "Plot:  " + response.data.Plot,
+                            "----------------------"
+                        ].join("\n\n");
+
+                        console.log(showData);
+                        logOutput(showData);
+                    }
+                    else {
+                        console.log("MOVIE NOT FOUND!");
+                    }
+                    
                 }).catch(err);
         }
     }
