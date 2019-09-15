@@ -7,6 +7,7 @@ var fs = require("fs");
 
 var spotify = new Spotify(keys.spotify);
 
+//grab arguments from command line
 var nodeArgs = process.argv;
 var queryRequest = process.argv[2];
 
@@ -28,7 +29,8 @@ function grabArguments(nodeArgs) {
     return arguments;
 }
 
-//check if reading input from a file
+//check if reading input from a file than grab arguments from file
+//then callAPI function with the respective query request and search term
 if (queryRequest === "do-what-it-says" || queryRequest === undefined) {
     fs.readFile("random.txt", "utf8", function (error, data) {
         if (error) {
@@ -86,7 +88,7 @@ function callAPI(queryRequest) {
             axios.get(bandAPI).then(
                 function (response) {
                     //console.log(response);
-                    if(response.data.length > 0){
+                    if (response.data.length > 0) {
                         var showData = [
                             "-------Bands------",
                             "Band: " + response.data[0].lineup[0],
@@ -96,7 +98,7 @@ function callAPI(queryRequest) {
                             "----------------------"
                         ].join("\n\n");
                         console.log(showData);
-    
+
                         logOutput(showData);
                     }
                     else {
@@ -150,6 +152,7 @@ function callAPI(queryRequest) {
     };
 }
 
+//function that handles output to log.txt
 function logOutput(text) {
     fs.appendFile("log.txt", text, function (err) {
         if (err) {
@@ -161,5 +164,3 @@ function logOutput(text) {
 
     });
 }
-
-//callAPI(queryRequest);

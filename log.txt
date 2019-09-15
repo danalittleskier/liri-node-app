@@ -74,4 +74,52 @@ City:  Las Vegas State NV
 
 Date:  10/17/2019
 
+-----------------------------Movie------
+
+Title:  Gladiator
+
+Year:  2000
+
+Rating:  8.5
+
+Ratings - Rotten Tomatoes:  76%
+
+Country:  USA, UK, Malta, Morocco
+
+Language:  English
+
+Actors:  Russell Crowe, Joaquin Phoenix, Connie Nielsen, Oliver Reed
+
+Plot:  A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.
+
+-----------------------------Bands------
+
+Band: Lady Gaga
+
+Venue:  LADY GAGA ENIGMA
+
+City:  Las Vegas State NV
+
+Date:  10/17/2019
+
+-----------------------------Bands------
+
+Band: Madonna
+
+Venue:  BAM (Brooklyn Academy of Music)
+
+City:  Brooklyn State NY
+
+Date:  09/14/2019
+
+-----------------------------Song------
+
+Song name:  The Final Countdown
+
+Album:  The Final Countdown (Expanded Edition)
+
+Preview:  https://p.scdn.co/mp3-preview/95b70df7dda2d699957e8b068b89e233e3a5e5ee?cid=b136331984fa4270939851bcdc3fe980
+
+Artist:  Europe
+
 ----------------------
